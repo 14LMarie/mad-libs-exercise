@@ -11,22 +11,23 @@ angular.module('myApp', [])
                 $scope.inputForm = true;
                 $scope.results = false;
             }
+            console.log("working");
         }
 
 
         // Allows you to set default form values on fields.
         var defaultForm = {
-                yourName: "",
-                dirtyTask: "",
-                obnoxiousCelebrity: "",
-                jobTitle: "",
-                celebrity: "",
-                hugeNumber: "",
-                tediousTask: "",
-                uselessSkill: "",
-                adjective: ""
-            };
-        $scope.resetForm = function() {
+            yourName: "",
+            dirtyTask: "",
+            obnoxiousCelebrity: "",
+            jobTitle: "",
+            celebrity: "",
+            hugeNumber: "",
+            tediousTask: "",
+            uselessSkill: "",
+            adjective: ""
+        };
+        $scope.resetForm = function () {
             $scope.user = defaultForm;
             $scope.inputForm = true;
             $scope.results = false;
