@@ -1,5 +1,4 @@
-angular.module('myApp', ['ngMessages']);
-angular.module('myApp', [])
+angular.module('myApp', ['ngMessages'])
     .controller('wordController', ['$scope', function ($scope) {
         //hide and show sections
         $scope.inputForm = true;
