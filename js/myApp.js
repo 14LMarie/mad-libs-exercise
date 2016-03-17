@@ -1,4 +1,6 @@
-angular.module('myApp', ['ngMessages', 'ngAnimate'])
+var app = angular.module('myApp', ['ngAnimate']);
+
+var app = angular.module('myApp', ['ngMessages'])
     .controller('wordController', ['$scope', function ($scope) {
         //hide and show sections
         $scope.hideForm = false;
@@ -23,8 +25,7 @@ angular.module('myApp', ['ngMessages', 'ngAnimate'])
         };
         $scope.resetForm = function () {
             $scope.user = defaultForm;
-            $scope.inputForm = true;
-            $scope.results = false;
+            $scope.hideForm = false;
             $scope.myForm.$setPristine();
             $scope.myForm.$setValidity();
             $scope.myForm.$setUntouched();

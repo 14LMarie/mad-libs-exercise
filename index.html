@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Mad Libs</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Coming+Soon' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" text="text/css">
 </head>
 
@@ -24,7 +25,7 @@
             <h2><strong>Provide the following words:</strong></h2>
 
             <div class="form-group" ng-class="{'has-error': myForm.yourName.$touched && myForm.yourName.$invalid}">
-                <input type="text" placeholder="your name" name="yourName" ng-model="user.yourName" ng-init="user.yourName='lynsey'" required>
+                <input type="text" placeholder="your name" name="yourName" ng-model="user.yourName" required>
                 <div class="help-block" ng-messages="myForm.yourName.$error" ng-if="myForm.yourName.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
@@ -32,7 +33,7 @@
 
 
             <div class="form-group" ng-class="{'has-error': myForm.dirtyTask.$touched && myForm.dirtyTask.$invalid}">
-                <input type="text" placeholder="dirty task" name="dirtyTask" ng-model="user.dirtyTask" ng-init="user.dirtyTask='lynsey'" required>
+                <input type="text" placeholder="dirty task" name="dirtyTask" ng-model="user.dirtyTask" required>
                 <div class="help-block" ng-messages="myForm.dirtyTask.$error" ng-if="myForm.dirtyTask.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
@@ -40,7 +41,7 @@
 
 
             <div class="form-group" ng-class="{'has-error': myForm.obnoxiousCelebrity.$touched && myForm.dirtyTask.$invalid}">
-                <input type="text" placeholder="obnoxious celebrity" name="obnoxiousCelebrity" ng-model="user.obnoxiousCelebrity" ng-init="user.obnoxiousCelebrity='lynsey'" required>
+                <input type="text" placeholder="obnoxious celebrity" name="obnoxiousCelebrity" ng-model="user.obnoxiousCelebrity" required>
                 <div class="help-block" ng-messages="myForm.obnoxiousCelebrity.$error" ng-if="myForm.obnoxiousCelebrity.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
@@ -48,14 +49,14 @@
 
 
             <div class="form-group" ng-class="{'has-error': myForm.jobTitle.$touched && myForm.jobTitle.$invalid}">
-                <input type="text" placeholder="job title" name="jobTitle" ng-model="user.jobTitle" ng-init="user.jobTitle='lynsey'" required>
+                <input type="text" placeholder="job title" name="jobTitle" ng-model="user.jobTitle" required>
                 <div class="help-block" ng-messages="myForm.jobTitle.$error" ng-if="myForm.jobTitle.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
             </div>
 
             <div class="form-group" ng-class="{'has-error': myForm.celebrity.$touched && myForm.celebrity.$invalid}">
-                <input type="text" placeholder="celebrity" name="celebrity" ng-model="user.celebrity" ng-init="user.celebrity='lynsey'" required>
+                <input type="text" placeholder="celebrity" name="celebrity" ng-model="user.celebrity" required>
                 <div class="help-block" ng-messages="myForm.celebrity.$error" ng-if="myForm.celebrity.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
@@ -71,21 +72,21 @@
 
 
             <div class="form-group" ng-class="{'has-error': myForm.tediousTask.$touched && myForm.tediousTask.$invalid}">
-                <input type="text" placeholder="tedious task" name="tediousTask" ng-model="user.tediousTask" ng-init="user.tediousTask='lynsey'" required>
+                <input type="text" placeholder="tedious task" name="tediousTask" ng-model="user.tediousTask" required>
                 <div class="help-block" ng-messages="myForm.tediousTask.$error" ng-if="myForm.tediousTask.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
             </div>
 
             <div class="form-group" ng-class="{'has-error': myForm.uselessSkill.$touched && myForm.uselessSkill.$invalid}">
-                <input type="text" placeholder="useless skill" name="uselessSkill" ng-model="user.uselessSkill" ng-init="user.uselessSkill='lynsey'" required>
+                <input type="text" placeholder="useless skill" name="uselessSkill" ng-model="user.uselessSkill" required>
                 <div class="help-block" ng-messages="myForm.uselessSkill.$error" ng-if="myForm.uselessSkill.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
             </div>
 
             <div class="form-group" ng-class="{'has-error': myForm.adjective.$touched && myForm.adjective.$invalid}">
-                <input type="text" placeholder="adjective" name="adjective" ng-model="user.adjective" ng-init="user.adjective='lynsey'" required>
+                <input type="text" placeholder="adjective" name="adjective" ng-model="user.adjective" required>
                 <div class="help-block" ng-messages="myForm.adjective.$error" ng-if="myForm.adjective.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
@@ -96,13 +97,11 @@
             </div>
         </form>
     </section>
-    <section class="round-animate">
-        <div class="round"></div>
-    </section>
+
     <section class="revised-story" ng-show="hideForm">
-        <p><u>{{ user.yourName }}</u> was a <u>{{ user.jobTitle }}</u> who loved technology. Although he/she loved parts of his/her job, he/she absolutely hated <u>{{ user.tediousTask }}</u> and <u>{{ user.dirtyTask }}</u>. So, <u>{{ user.yourName }}</u> met with his/her life mentor <u>{{ user.celebrity }}</u> who told him/her to learn how to <u>{{ user.uselessSkill}}</u> with Thinkful. Thinkful didn't offer a course on <u>{{ user.uselessSkill }}</u> so he/she studied programming instead.</p>
+        <p class="move-in"><u>{{ user.yourName }}</u> was a <u>{{ user.jobTitle }}</u> who loved technology. Although he/she loved parts of his/her job, he/she absolutely hated <u>{{ user.tediousTask }}</u> and <u>{{ user.dirtyTask }}</u>. So, <u>{{ user.yourName }}</u> met with his/her life mentor <u>{{ user.celebrity }}</u> who told him/her to learn how to <u>{{ user.uselessSkill}}</u> with Thinkful. Thinkful didn't offer a course on <u>{{ user.uselessSkill }}</u> so he/she studied programming instead.</p>
         <br>
-        <p>What a great decision! With her new skills, <u>{{ user.yourName }}</u> built a(n) <u>{{ user.adjective }}</u> robot named <u>{{ user.obnoxiousCelebrity }}</u> that not only loved <u>{{ user.dirtyTask }}</u> but did it <u>{{ user.hugeNumber}}</u> faster.</p>
+        <p class="move-in">What a great decision! With her new skills, <u>{{ user.yourName }}</u> built a(n) <u>{{ user.adjective }}</u> robot named <u>{{ user.obnoxiousCelebrity }}</u> that not only loved <u>{{ user.dirtyTask }}</u> but did it <u>{{ user.hugeNumber}}</u> faster.</p>
         <div>
             <button ng-click="resetForm()">Start Over</button>
         </div>
@@ -110,6 +109,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-messages.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/1.2.18/angular-animate.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="js/myApp.js"></script>
 </body>
 
