@@ -21,7 +21,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
-    border: 1px solid;
     font-family: 'Coming Soon', cursive;
 }
 
@@ -29,7 +28,8 @@ section {
     padding: 2rem;
 }
 
-section,
+section.word-input,
+section.revised-story,
 header {
     border: 1px solid;
 }
@@ -123,6 +123,71 @@ button {
     -webkit-box-shadow: 2px 3px 4px 0px #000;
     box-shadow: 2px 3px 4px 0px #000;
 }
+
+section.round-animate {
+    border: none;
+}
+
+
+/*element is hiden*/
+
+.revised-story.ng-hide-add {
+    transition: 2s linear 1;
+    opacity: 0;
+}
+
+
+/*element is showing*/
+
+.revised-story.ng-hide-remove {
+    opacity: 1;
+}
+
+.revised-story.ng-hide-add,
+.revised-story.ng-hide-remove {
+    display: block !important;
+}
+
+
+/*
+.round {
+    width: 0px;
+    height: 0px;
+    border: 1px solid #F5F5F5;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    -webkit-animation: slide 2s linear 1;
+}
+
+@-webkit-keyframes slide {
+    0% {
+        width: 0px;
+        height: 0px;
+        left: 0px;
+        top: 0px;
+        background-color: #F5F5F5;
+        border: 1px solid #F5F5F5;
+    }
+    25% {
+        width: 60px;
+        height: 60px;
+        left: 200px;
+        top: 500px;
+        background-color: #BEBEBE;
+        border: 1px solid #BEBEBE;
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        left: 1000px;
+        top: 200px;
+        background-color: #7F7F7F;
+        border: 1px solid #7F7F7F;
+    }
+}*/
 
 
 /* Footer styles

@@ -1,16 +1,11 @@
-angular.module('myApp', ['ngMessages'])
+angular.module('myApp', ['ngMessages', 'ngAnimate'])
     .controller('wordController', ['$scope', function ($scope) {
         //hide and show sections
-        $scope.inputForm = true;
+        $scope.hideForm = false;
         $scope.submit = function () {
             if ($scope.myForm.$valid) {
-                $scope.inputForm = false;
-                $scope.results = true;
-            } else {
-                $scope.inputForm = true;
-                $scope.results = false;
+                $scope.hideForm = true;
             }
-            console.log("working");
         }
 
 
