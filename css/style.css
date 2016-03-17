@@ -104,16 +104,14 @@ input {
 
 .form-group {
     width: 30%;
-}
-/*.error {
-    font-size: 0.5rem;
-    font-family: font-family: 'Open Sans Condensed', sans-serif;
+    max-height: 4rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
 }
 
-form.submitted .ng-invalid
-{
-    border:1px solid #f00;
-}*/
+.has-error input {
+    border: 1px solid #f00;
+}
 
 button {
     float: right;
@@ -125,6 +123,7 @@ button {
     -webkit-box-shadow: 2px 3px 4px 0px #000;
     box-shadow: 2px 3px 4px 0px #000;
 }
+
 
 /* Footer styles
 (all the styles inside the < footer > tag)

@@ -22,7 +22,7 @@
     <section class="word-input" ng-show="inputForm" class="ng-hide">
         <form name="myForm" novalidate ng-submit="submit()">
             <h2><strong>Provide the following words:</strong></h2>
-            
+
             <div class="form-group" ng-class="{'has-error': myForm.yourName.$touched && myForm.yourName.$invalid}">
                 <input type="text" placeholder="your name" name="yourName" ng-model="user.yourName" required>
                 <div class="help-block" ng-messages="myForm.yourName.$error" ng-if="myForm.yourName.$touched">
@@ -31,36 +31,36 @@
             </div>
 
 
-           <div class="form-group" ng-class="{'has-error': myForm.dirtyTask.$touched && myForm.dirtyTask.$invalid}">
+            <div class="form-group" ng-class="{'has-error': myForm.dirtyTask.$touched && myForm.dirtyTask.$invalid}">
                 <input type="text" placeholder="dirty task" name="dirtyTask" ng-model="user.dirtyTask" required>
                 <div class="help-block" ng-messages="myForm.dirtyTask.$error" ng-if="myForm.dirtyTask.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
             </div>
-            
-            
+
+
             <div class="form-group" ng-class="{'has-error': myForm.obnoxiousCelebrity.$touched && myForm.dirtyTask.$invalid}">
                 <input type="text" placeholder="obnoxious celebrity" name="obnoxiousCelebrity" ng-model="user.obnoxiousCelebrity" required>
-                 <div class="help-block" ng-messages="myForm.obnoxiousCelebrity.$error" ng-if="myForm.obnoxiousCelebrity.$touched">
+                <div class="help-block" ng-messages="myForm.obnoxiousCelebrity.$error" ng-if="myForm.obnoxiousCelebrity.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
             </div>
-            
-            
+
+
             <div class="form-group" ng-class="{'has-error': myForm.jobTitle.$touched && myForm.jobTitle.$invalid}">
                 <input type="text" placeholder="job title" name="jobTitle" ng-model="user.jobTitle" required>
                 <div class="help-block" ng-messages="myForm.jobTitle.$error" ng-if="myForm.jobTitle.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
             </div>
-            
-            <div class="form-group" ng-class="{'has-error': myForm.celebrity.$touched && myForm.celebrity.$invalid}">        
+
+            <div class="form-group" ng-class="{'has-error': myForm.celebrity.$touched && myForm.celebrity.$invalid}">
                 <input type="text" placeholder="celebrity" name="celebrity" ng-model="user.celebrity" required>
                 <div class="help-block" ng-messages="myForm.celebrity.$error" ng-if="myForm.celebrity.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
             </div>
-            
+
             <div class="form-group" ng-class="{'has-error': myForm.hugeNumber.$touched && myForm.hugeNumber.$invalid}">
                 <input type="number" placeholder="huge number" name="hugeNumber" ng-model="user.hugeNumber" required min="100">
                 <div class="help-block" ng-messages="myForm.hugeNumber.$error" ng-if="myForm.hugeNumber.$touched">
@@ -68,22 +68,22 @@
                     <p ng-message="min">Enter a number larger than 100.</p>
                 </div>
             </div>
-            
-            
+
+
             <div class="form-group" ng-class="{'has-error': myForm.tediousTask.$touched && myForm.tediousTask.$invalid}">
                 <input type="text" placeholder="tedious task" name="tediousTask" ng-model="user.tediousTask" required>
                 <div class="help-block" ng-messages="myForm.tediousTask.$error" ng-if="myForm.tediousTask.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
-            </div>    
-            
+            </div>
+
             <div class="form-group" ng-class="{'has-error': myForm.uselessSkill.$touched && myForm.uselessSkill.$invalid}">
                 <input type="text" placeholder="useless skill" name="uselessSkill" ng-model="user.uselessSkill" required>
                 <div class="help-block" ng-messages="myForm.uselessSkill.$error" ng-if="myForm.uselessSkill.$touched">
                     <p ng-message="required">This field is required.</p>
                 </div>
-            </div>    
-            
+            </div>
+
             <div class="form-group" ng-class="{'has-error': myForm.adjective.$touched && myForm.adjective.$invalid}">
                 <input type="text" placeholder="adjective" name="adjective" ng-model="user.adjective" required>
                 <div class="help-block" ng-messages="myForm.adjective.$error" ng-if="myForm.adjective.$touched">
@@ -94,8 +94,8 @@
             <div>
                 <button type="submit">Generate My Mad Lib</button>
             </div>
+        </form>
     </section>
-    </form>
     <section class="revised-story" ng-show="results" class="ng-hide">
         <p><u>{{ user.yourName }}</u> was a <u>{{ user.jobTitle }}</u> who loved technology. Although he/she loved parts of his/her job, he/she absolutely hated <u>{{ user.tediousTask }}</u> and <u>{{ user.dirtyTask }}</u>. So, <u>{{ user.yourName }}</u> met with his/her life mentor <u>{{ user.celebrity }}</u> who told him/her to learn how to <u>{{ user.uselessSkill}}</u> with Thinkful. Thinkful didn't offer a course on <u>{{ user.uselessSkill }}</u> so he/she studied programming instead.</p>
         <br>
