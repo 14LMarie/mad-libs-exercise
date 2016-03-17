@@ -1,12 +1,37 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngMessages'])
     .controller('wordController', ['$scope', function ($scope) {
-        $scope.femaleName = "female name";
-        $scope.dirtyTask = "dirty task";
-        $scope.obnoxiousCelebrity = "obnoxious celebrity";
-        $scope.jobTitle = "job title";
-        $scope.celebrity = "celebrity";
-        $scope.hugeNumber = "huge number'";
-        $scope.tediousTask = "tedious task";
-        $scope.uselessSkill = "useless skill";
-        $scope.adjective = "adjective";
+        //hide and show sections
+        $scope.inputForm = true;
+        $scope.submit = function () {
+            if ($scope.myForm.$valid) {
+                $scope.inputForm = false;
+                $scope.results = true;
+            } else {
+                $scope.inputForm = true;
+                $scope.results = false;
+            }
+            console.log("working");
+        }
+
+
+        // Allows you to set default form values on fields.
+        var defaultForm = {
+            yourName: "",
+            dirtyTask: "",
+            obnoxiousCelebrity: "",
+            jobTitle: "",
+            celebrity: "",
+            hugeNumber: "",
+            tediousTask: "",
+            uselessSkill: "",
+            adjective: ""
+        };
+        $scope.resetForm = function () {
+            $scope.user = defaultForm;
+            $scope.inputForm = true;
+            $scope.results = false;
+            $scope.myForm.$setPristine();
+            $scope.myForm.$setValidity();
+            $scope.myForm.$setUntouched();
+        };
     }]);
